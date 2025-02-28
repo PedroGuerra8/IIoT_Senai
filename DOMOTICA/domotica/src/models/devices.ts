@@ -1,29 +1,32 @@
 export class Device {
-    nome: string = "";
+    name: string = "";
     state: boolean = false;
-    color: string = "#cca947";
-}
-
-export class Places {
-    nome: string = "";
-    devices: Array<Device> = [];
+    color: string  =  "#B2BEBF";
+    icon: string = "device";
 }
 
 
 
+export class Environment {
+    name: string = "";
+    state: Array<Device> = []
+}
 
 
 
-
-
-
-/*export interface PlacesInterface {
+/*
+export type Places {
     nome: string,
-    devices: Array<Device>,
+    devices: Array<Device>
 }
 
+export interface PlacesInterface{
+    nome: string,
+    devices: Array<Device>
+}
 
-export class PlacesClass {
-    nome: string = "";
+export class PlacesClass{
+    nome: String = "";
     devices: Array<Device> = [];
-}*/
+}
+    */
