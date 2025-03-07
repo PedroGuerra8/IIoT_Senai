@@ -9,7 +9,8 @@ export class Device {
 
 export class Environment {
     name: string = "";
-    state: Array<Device> = []
+    devices: Array<Device> = [];
+
 }
 
 

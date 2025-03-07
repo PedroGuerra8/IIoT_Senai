@@ -2,9 +2,18 @@
 @use "reset.scss";
 @use "variables.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'material-icons/iconfont/material-icons.css';
+
 #app{
     min-width: 100vh;
     min-height: 100vh;
     background-color: var(--backgrpund-light-color);
+    font-family: 'Montserrat';
 }
+
+
+
+
 
