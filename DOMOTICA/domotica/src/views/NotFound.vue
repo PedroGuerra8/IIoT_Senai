@@ -1,14 +1,12 @@
 <script setup lang="ts">
 
-
 </script>
 
-<template>
-    <h1>Page not found ☹</h1>
-    <img src="https://th.bing.com/th/id/OIP.G5adnm-vrYYWBOwoYoTHUQAAAA?w=204&h=204&c=7&r=0&o=5&pid=1.7">
+<template >
+    <h1>Page not found! 😢</h1>
+    <img src="https://i.pinimg.com/474x/d5/7d/3e/d57d3e369e80c6e37119042ce597461f.jpg" alt="">
 </template>
 
-<style lang="scss">
-
-
+<style scoped lang="scss">
+    
 </style>

@@ -5,7 +5,7 @@ import { Device } from '@/models/devices';
         device: { type: Device, required: true }
     });
 
-    const changeDevice = (newState: boolean) => {
+    const changeDevice = (newState: boolean)=> {
         props.device.state = newState;
     }
     

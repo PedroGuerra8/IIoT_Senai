@@ -5,19 +5,21 @@ import NotFound from '@/views/NotFound.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-   {
-     component: Devices,
-      path: '/'
-  },
-  {
-    component:Management,
-    path: '/Management'
-  },
-  {
-    component:NotFound,
-    path: '/:pathmatch(.*)*'
-  }
+  routes: [    
+    {
+      component: Devices,
+      path: '/',
+      name: 'devices'
+    },
+    {
+      component: Management,
+      path: '/management',
+      name: 'management'
+    },
+    {
+      component: NotFound,
+      path: '/:pathMatch(.*)*'
+    }
   ],
 })
 
