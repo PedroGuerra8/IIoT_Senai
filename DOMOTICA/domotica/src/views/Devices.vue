@@ -1,5 +1,4 @@
 <script setup lang="ts">    
-    import DeviceComponent from '@/components/DeviceComponent.vue';
     import EnvironmentComponent from '@/components/EnvironmentComponent.vue';
     import { Device, Environment } from '@/models/devices';
     import { reactive, ref } from 'vue';
@@ -46,9 +45,9 @@
     
   </script>
 
-<template>
+<template>    
     <main class="flex flex-column text-center justify-content-center align-items-center">
-        <h1>Devices page!!!!</h1>
+        <h1>Seus Dispositivos 🚥</h1>
         <section class="environments flex flex-column border-round-sm">
             <div v-for="(environment, env_id) in environments" :key="env_id">
                 <EnvironmentComponent :environment="environment"/>

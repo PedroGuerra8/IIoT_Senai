@@ -1,30 +1,28 @@
 <script setup lang="ts">
-import { reactive, ref, computed } from 'vue';
+import { ref, computed } from 'vue';
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 
 const router = useRouter();
 
+const buttonRouteLabel = computed(()=> 
+      router.currentRoute.value.name === 'devices'? 
+      'Dispositivos' : 'Gerenciamento');
 
-const buttonRouteLabel = computed(() =>
-    router.currentRoute.value.name === 'devices'?
-    'Dispositivos' : 'Gerenciamento');
-
-const changePage = () => {
+const changePage = ()=> {
   if(router.currentRoute.value.name === 'devices'){
     router.push('/management');
+    
   }
   else{
-    router.push('/')
-  }
+    router.push('/');
+  }  
 }
-
 </script>
 
 <template>
   <button @click="changePage">Página {{ buttonRouteLabel }}</button>
   <RouterView />
 </template>
-
 
 <style scoped>
 header {
