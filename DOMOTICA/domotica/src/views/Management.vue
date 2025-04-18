@@ -2,7 +2,7 @@
     import { Device, Environment } from '@/models/devices';
     import { reactive, ref, type Ref } from 'vue';
     import EnvironmentComponent from '@/components/EnvironmentComponent.vue';
-import { useDeviceRepository } from '@/stores/deviceRepository';
+    import { useDeviceRepository } from '@/stores/deviceRepository';
 
     const showNewEnvForm = ref(false);
     const newEnv = reactive(new Environment());
