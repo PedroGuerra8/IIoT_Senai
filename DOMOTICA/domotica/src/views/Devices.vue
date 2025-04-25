@@ -1,6 +1,6 @@
 <script setup lang="ts">    
     import EnvironmentComponent from '@/components/EnvironmentComponent.vue';
-    import { Device, Environment } from '@/models/devices';
+    import { Device, Environment, mapApiResponseToEnvironments } from '@/models/devices';
     import { getEnvironments } from '@/services/environments.service';
     import { reactive, ref } from 'vue';
     
@@ -8,14 +8,14 @@
     
     getEnvironments()
         .then(response=>{
-            response.items.forEach(item=>{
-                    if(item.fields) environments.push(item.fields);
-                }                
-            )
+             mapApiResponseToEnvironments(response)
+                .forEach(item=>environments.push(item));
+             
         })
         .catch(error=>{
             console.error("Error when getting Environments: ",error);
         })
+
     
   </script>
 
@@ -42,4 +42,3 @@
         }
     }
 </style>
-
